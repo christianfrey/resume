@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV — Christian Frey</title>
+  <meta name="description" content="CV de Christian Frey — Développeur Web Full Stack" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#7c3aed' // violet
+          },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    html, body { height: 100%; }
+    .timeline-dot {
+      top: 0.35rem; 
+    }
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 0.5in;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 print:bg-white print:text-black print:p-0 print:m-0">
+  
+  <main class="container mx-auto max-w-5xl px-4 py-10 lg:grid lg:grid-cols-3 gap-6 lg:gap-8 print:grid print:grid-cols-3 print:gap-4 print:p-0 print:m-0 print:max-w-full">
+    <section class="lg:col-span-3 text-center header-section print:col-span-3 print:text-left print:pb-2 print:mb-2 print:mt-0 print:pt-0">
+      <div class="header-content flex flex-col lg:flex-row lg:items-center lg:text-left gap-6 lg:gap-8 print:flex print:flex-row print:items-center">
+        <img src="./assets/profile.jpg" alt="Photo de profil" class="mx-auto lg:mx-0 h-40 w-40 rounded-full ring-4 ring-primary/30 shadow-lg object-cover print:w-32 print:h-32 print:m-0 print:shadow-none print:ring-0 print:border print:border-gray-300" />
+        <div class="header-text print:flex-grow">
+          <h1 class="text-4xl font-extrabold text-gray-900 print:text-[1.5rem] print:mt-0">Christian Frey</h1>
+          <p class="text-2xl text-primary font-semibold subtitle print:text-lg print:mt-1">Développeur Web Full Stack</p>
+          <p class="mt-3 max-w-3xl lg:max-w-none mx-auto text-gray-600 print:text-sm print:mt-1">
+            Développeur web full stack expérimenté en PHP/Laravel et React/Next.js,<br>je recherche de nouveaux défis techniques et des projets innovants en Alsace.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Colonne de gauche: Compétences, Langues, Contact, Formation -->
+    <div class="lg:col-span-1 space-y-4 left-column print:col-span-1">
+      <div>
+        <h2 class="text-xl font-bold text-gray-900 border-b-2 border-primary inline-block pb-1 print:text-base">Compétences</h2>
+        <div class="mt-3 space-y-3">
+          <div>
+            <h3 class="font-semibold text-gray-700 print:text-sm">Front-End</h3>
+            <ul class="mt-1 flex flex-wrap gap-1 text-sm print:text-xs">
+              <li class="px-2 py-1 bg-white border rounded shadow-sm print:shadow-none print:border-gray-300 print:p-[0.2rem_0.3rem]">React</li>
+              <li class="px-2 py-1 bg-white border rounded shadow-sm print:shadow-none print:border-gray-300 print:p-[0.2rem_0.3rem]">Next.js</li>
+              <li class="px-2 py-1 bg-white border rounded shadow-sm print:shadow-none print:border-gray-300 print:p-[0.2rem_0.3rem]">JavaScript</li>
+              <li class="px-2 py-1 bg-white border rounded shadow-sm print:shadow-none print:border-gray-300 print:p-[0.2rem_0.3rem]">Tailwind CSS</li>
+              <li class="px-2 py-1 bg-white border rounded shadow-sm print:shadow-none print:border-gray-300 print:p-[0.2rem_0.3rem]">Framer Motion</li>
+              <li class="px-2 py-1 bg-white border rounded shadow-sm print:shadow-none print:border-gray-300 print:p-[0.2rem_0.3rem]">Photoshop</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-700 print:text-sm">Back-End</h3>
+            <ul class="mt-1 flex flex-wrap gap-1 text-sm print:text-xs">
+              <li class="px-2 py-1 bg-white border rounded shadow-sm print:shadow-none print:border-gray-300 print:p-[0.2rem_0.3rem]">PHP / Laravel</li>
+              <li class="px-2 py-1 bg-white border rounded shadow-sm print:shadow-none print:border-gray-300 print:p-[0.2rem_0.3rem]">Node.js</li>
+              <li class="px-2 py-1 bg-white border rounded shadow-sm print:shadow-none print:border-gray-300 print:p-[0.2rem_0.3rem]">Python</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-700 print:text-sm">Bases de données</h3>
+            <ul class="mt-1 flex flex-wrap gap-1 text-sm print:text-xs">
+              <li class="px-2 py-1 bg-white border rounded shadow-sm print:shadow-none print:border-gray-300 print:p-[0.2rem_0.3rem]">MySQL</li>
+              <li class="px-2 py-1 bg-white border rounded shadow-sm print:shadow-none print:border-gray-300 print:p-[0.2rem_0.3rem]">PostgreSQL</li>
+              <li class="px-2 py-1 bg-white border rounded shadow-sm print:shadow-none print:border-gray-300 print:p-[0.2rem_0.3rem]">SQL Server</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-700 print:text-sm">Outils &amp; Méthodes</h3>
+            <ul class="mt-1 flex flex-wrap gap-1 text-sm print:text-xs">
+              <li class="px-2 py-1 bg-white border rounded shadow-sm print:shadow-none print:border-gray-300 print:p-[0.2rem_0.3rem]">Git</li>
+              <li class="px-2 py-1 bg-white border rounded shadow-sm print:shadow-none print:border-gray-300 print:p-[0.2rem_0.3rem]">CI/CD</li>
+              <li class="px-2 py-1 bg-white border rounded shadow-sm print:shadow-none print:border-gray-300 print:p-[0.2rem_0.3rem]">Agile</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-bold text-gray-900 border-b-2 border-primary inline-block pb-1 print:text-base">Formation</h2>
+        <ul class="mt-4 space-y-2 text-sm print:space-y-1 print:text-xs">
+          <li class="bg-white border rounded shadow-sm px-3 py-2 print:shadow-none print:border-gray-300 print:p-[0.3rem_0.5rem]">
+            <div class="flex items-center justify-between print:text-[0.65rem]">
+              <span class="font-medium">SST (Initiale & Recyclage)</span>
+              <span class="text-gray-500">2021 & 2024</span>
+            </div>
+            <span class="text-xs text-gray-600 print:text-[0.6rem]">GIFOP FORMATION</span>
+          </li>
+          <li class="bg-white border rounded shadow-sm px-3 py-2 print:shadow-none print:border-gray-300 print:p-[0.3rem_0.5rem]">
+            <div class="flex items-center justify-between print:text-[0.65rem]">
+              <span class="font-medium">DUT Informatique</span>
+              <span class="text-gray-500">2005-2007</span>
+            </div>
+            <span class="text-xs text-gray-600 print:text-[0.6rem]">IUT Robert Schuman</span>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-bold text-gray-900 border-b-2 border-primary inline-block pb-1 print:text-base">Langues</h2>
+        <ul class="mt-4 space-y-2 text-sm print:space-y-1 print:text-[0.65rem]">
+          <li class="flex items-center justify-between bg-white border rounded shadow-sm px-3 py-2 print:shadow-none print:border-gray-300 print:p-[0.2rem_0.5rem]">
+            <span>Anglais</span><span class="text-gray-500 print:ml-2">Courant</span>
+          </li>
+          <li class="flex items-center justify-between bg-white border rounded shadow-sm px-3 py-2 print:shadow-none print:border-gray-300 print:p-[0.2rem_0.5rem]">
+            <span>Allemand</span><span class="text-gray-500 print:ml-2">Notions</span>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-bold text-gray-900 border-b-2 border-primary inline-block pb-1 print:text-base">Détails</h2>
+        <div class="mt-4 flex flex-col gap-2 text-sm text-primary print:gap-1 print:text-xs">
+          <!-- Lieu-->
+          <div class="contact-item flex items-center gap-3 px-3 py-2 bg-white rounded shadow-sm border print:shadow-none print:border-gray-300 print:py-[0.3rem]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block flex-none text-purple-600 dark:text-purple-500">
+              <path d="M18 8c0 4.5-6 9-6 9s-6-4.5-6-9a6 6 0 0 1 12 0"></path>
+              <circle cx="12" cy="8" r="2"></circle>
+              <path d="M8.835 14H5a1 1 0 0 0-.9.7l-2 6c-.1.1-.1.2-.1.3 0 .6.4 1 1 1h18c.6 0 1-.4 1-1 0-.1 0-.2-.1-.3l-2-6a1 1 0 0 0-.9-.7h-3.835"></path>
+            </svg>
+            <span class="text-gray-600">Wittenheim, Alsace</span>
+          </div>
+          <!-- Téléphone -->
+          <a href="tel:+33606532786" class="contact-item flex items-center gap-3 px-3 py-2 bg-white rounded shadow-sm border hover:text-purple-700 print:shadow-none print:border-gray-300 print:py-[0.3rem]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block flex-none text-purple-600 dark:text-purple-500">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+            <span class="text-gray-600">+33 6 06 53 27 86</span>
+          </a>
+          <!-- Email -->
+          <a href="mailto:christian.ubu@gmail.com" class="contact-item flex items-center gap-3 px-3 py-2 bg-white rounded shadow-sm border hover:text-purple-700 print:shadow-none print:border-gray-300 print:py-[0.3rem]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span class="text-gray-600">christian.ubu@gmail.com</span>
+          </a>
+          <!-- GitHub -->
+          <a href="https://github.com/christianfrey" class="contact-item flex items-center gap-3 px-3 py-2 bg-white rounded shadow-sm border hover:text-purple-700 print:shadow-none print:border-gray-300 print:py-[0.3rem]" target="_blank" rel="noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
+            </svg>
+            <span class="text-gray-600">github.com/christianfrey</span>
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/christian-frey-13375p34k/" class="contact-item flex items-center gap-3 px-3 py-2 bg-white rounded shadow-sm border hover:text-purple-700 print:shadow-none print:border-gray-300 print:py-[0.3rem]" target="_blank" rel="noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            <span class="text-gray-600">LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Colonne de droite: Expérience -->
+    <div class="lg:col-span-2 space-y-12 right-column print:col-span-2 print:pl-4">
+      <div>
+        <h2 class="text-xl font-bold text-gray-900 border-b-2 border-primary inline-block pb-1 print:text-base">Expérience</h2>
+        <div class="experience-block mt-6 relative print:mt-4">
+          <!-- Ligne verticale pour la timeline - Masquée à l'impression -->
+          <div class="absolute left-3 top-0 bottom-0 w-px bg-primary/40 print:hidden"></div>
+          <div class="space-y-4">
+            <!-- Barrisol -->
+            <div class="relative pl-12 print:pl-0">
+              <span class="timeline-dot absolute left-0 grid place-items-center h-6 w-6 rounded-full bg-primary text-white text-xs font-bold shadow print:hidden">•</span>
+              <div class="flex justify-between items-baseline gap-x-3">
+                <h3 class="text-lg font-semibold print:text-base">Normalu Barrisol <span class="text-sm font-normal text-gray-500 print:text-xs">• Kembs, Alsace</span></h3>
+                <span class="text-purple-600 text-sm font-semibold print:text-purple-600 print:text-xs">2015 → 2025</span>
+              </div>
+              <p class="job-title text-sm text-gray-600 mt-1 print:text-xs print:leading-tight">Développeur Web Full Stack</p>
+              <ul class="job-list mt-3 list-disc list-inside text-gray-700 space-y-1 print:mt-2 print:list-disc print:pl-4 print:text-gray-700 print:text-[0.7rem]">
+                <li>Développer un site web interactif pour la visualisation de projets en 360°, avec back-office de gestion et tri dynamique dans le front-office (Laravel, Livewire, Tailwind).</li>
+                <li>Refondre l'UI/UX des sites web de l'entreprise pour améliorer l'expérience utilisateur.</li>
+                <li>Créer et gérer un CMS propriétaire pour faciliter la publication et la gestion de contenu.</li>
+                <li>Installer, configurer et sécuriser des serveurs sous CentOS et Rocky Linux.</li>
+                <li>Optimiser le référencement SEO et analyser l'audience via Google Analytics pour augmenter la visibilité des sites.</li>
+                <li>Concevoir et lancer des campagnes newsletters avec MailChimp, atteignant un large public ciblé.</li>
+                <li>Gérer le large parc de noms de domaine de l'entreprise et assurer leur disponibilité et sécurité.</li>
+              </ul>
+            </div>
+            <!-- Dekuple -->
+            <div class="relative pl-12 print:pl-0">
+              <span class="timeline-dot absolute left-0 grid place-items-center h-6 w-6 rounded-full bg-primary text-white text-xs font-bold shadow print:hidden">•</span>
+              <div class="flex justify-between items-baseline gap-x-3">
+                <h3 class="text-lg font-semibold print:text-base">Dékuple Search Marketing <span class="text-sm font-normal text-gray-500 print:text-xs">• Mulhouse</span></h3>
+                <span class="text-purple-600 text-sm font-semibold print:text-purple-600 print:text-xs">2011 → 2015</span>
+              </div>
+              <p class="job-title text-sm text-gray-600 mt-1 print:text-xs print:leading-tight">Développeur Web Full Stack</p>
+              <ul class="job-list mt-3 list-disc list-inside text-gray-700 space-y-1 print:mt-2 print:list-disc print:pl-4 print:text-gray-700 print:text-[0.7rem]">
+                <li>Création et maintenance de sites clients, sites e-commerce, CMS propriétaire et grand public (WordPress, Drupal, Prestashop, Magento..)</li>
+                <li>Optimisation SEO et performances web.</li>
+                <li>Auditer et garantir la sécurité de l'ensemble des sites via correctifs.</li>
+              </ul>
+            </div>
+            <!-- Docaposte -->
+            <div class="relative pl-12 print:pl-0">
+              <span class="timeline-dot absolute left-0 grid place-items-center h-6 w-6 rounded-full bg-primary text-white text-xs font-bold shadow print:hidden">•</span>
+              <div class="flex justify-between items-baseline gap-x-3">
+                <h3 class="text-lg font-semibold print:text-base">Docaposte <span class="text-sm font-normal text-gray-500 print:text-xs">• Paris</span></h3>
+                <span class="text-purple-600 text-sm font-semibold print:text-purple-600 print:text-xs">2009 → 2011</span>
+              </div>
+              <p class="job-title text-sm text-gray-600 mt-1 print:text-xs print:leading-tight">Développeur Web</p>
+              <ul class="job-list mt-3 list-disc list-inside text-gray-700 space-y-1 print:mt-2 print:list-disc print:pl-4 print:text-gray-700 print:text-[0.7rem]">
+                <li>Développement d'outils web MVC avec Zend Framework.</li>
+                <li>Mise en place de dépôts SVN pour la gestion des projets.</li>
+                <li>Création de formulaires d'upload sécurisés (PHP/APC, ClamAV).</li>
+                <li>Gestion MySQL et développement d'un parseur XML couplé à un web service SOAP pour traitement massif de fichiers.</li>
+              </ul>
+            </div>
+            <!-- SpotCoffee -->
+            <div class="relative pl-12 print:pl-0">
+              <span class="timeline-dot absolute left-0 grid place-items-center h-6 w-6 rounded-full bg-primary text-white text-xs font-bold shadow print:hidden">•</span>
+              <div class="flex justify-between items-baseline gap-x-3">
+                <h3 class="text-lg font-semibold print:text-base">SpotCoffee <span class="text-sm font-normal text-gray-500 print:text-xs">• Paris</span></h3>
+                <span class="text-purple-600 text-sm font-semibold print:text-purple-600 print:text-xs">2007 → 2008</span>
+              </div>
+              <p class="job-title text-sm text-gray-600 mt-1 print:text-xs print:leading-tight">Développeur Full Stack & Réseaux (Startup)</p>
+              <ul class="job-list mt-3 list-disc list-inside text-gray-700 space-y-1 print:mt-2 print:list-disc print:pl-4 print:text-gray-700 print:text-[0.7rem]">
+                <li>Développement de solutions Wi-Fi pour CHR : CMS, portails captifs, back-office de gestion de hotspots sécurisés.</li>
+                <li>Personnalisation de firmwares OpenWrt et outils de déploiement (C, Python).</li>
+                <li>Administration serveurs (Fedora, Apache, MySQL, FreeRadius, OpenVPN).</li>
+                <li>Installation réseaux et support technique client.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-16 text-center text-sm text-gray-500 print:hidden">
+    <p>&copy; 2025 Christian Frey</p>
+  </footer>
+</body>
+</html>
