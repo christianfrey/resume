@@ -1,38 +1,14 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CV — Christian Frey</title>
   <meta name="description" content="CV de Christian Frey — Développeur Web Full Stack" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#7c3aed' // violet
-          },
-          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] }
-        }
-      }
-    }
-  </script>
-  <style>
-    html, body { height: 100%; }
-    .timeline-dot {
-      top: 0.35rem; 
-    }
-    @media print {
-      @page {
-        size: A4 portrait;
-        margin: 0.5in;
-      }
-    }
-  </style>
+  <link href="/src/style.css" rel="stylesheet">
 </head>
 
 <body class="bg-gray-50 text-gray-800 print:bg-white print:text-black print:p-0 print:m-0">
@@ -40,7 +16,7 @@
   <main class="container mx-auto max-w-5xl px-4 py-10 lg:grid lg:grid-cols-3 gap-6 lg:gap-8 print:grid print:grid-cols-3 print:gap-4 print:p-0 print:m-0 print:max-w-full">
     <section class="lg:col-span-3 text-center header-section print:col-span-3 print:text-left print:pb-2 print:mb-2 print:mt-0 print:pt-0">
       <div class="header-content flex flex-col lg:flex-row lg:items-center lg:text-left gap-6 lg:gap-8 print:flex print:flex-row print:items-center">
-        <img src="./assets/profile.jpg" alt="Photo de profil" class="mx-auto lg:mx-0 h-40 w-40 rounded-full ring-4 ring-primary/30 shadow-lg object-cover print:w-32 print:h-32 print:m-0 print:shadow-none print:ring-0 print:border print:border-gray-300" />
+        <img src="/profile.jpg" alt="Photo de profil" class="mx-auto lg:mx-0 h-40 w-40 rounded-full ring-4 ring-primary/30 shadow-lg object-cover print:w-32 print:h-32 print:m-0 print:shadow-none print:ring-0 print:border print:border-gray-300" />
         <div class="header-text print:flex-grow">
           <h1 class="text-4xl font-extrabold text-gray-900 print:text-[1.5rem] print:mt-0">Christian Frey</h1>
           <p class="text-2xl text-primary font-semibold subtitle print:text-lg print:mt-1">Développeur Web Full Stack</p>
@@ -248,4 +224,7 @@
     <p>&copy; 2025 Christian Frey</p>
   </footer>
 </body>
+
+<!-- <script type="module" src="/src/main.js"></script> -->
+
 </html>
