@@ -16,7 +16,7 @@ A modern, responsive resume website built with Tailwind CSS.
 
 ## 🛠️ Tech Stack
 
-- **Build Tool**: [Vite](https://vitejs.dev/) - Next generation frontend tooling
+- **Build Tool**: [Vite](https://vite.dev/) - Next generation frontend tooling
 - **CSS Framework**: [Tailwind CSS v4](https://tailwindcss.com/) - Utility-first CSS framework
 - **Deployment**: GitHub Pages with automated workflow
 
@@ -49,18 +49,6 @@ npm run dev
 npm run dev          # Start development server
 npm run build        # Build for production
 npm run preview      # Preview production build locally
-```
-
-## 📁 Project Structure
-
-```
-resume/
-├── src/
-│   ├── styles/      # CSS files
-│   └── ...          # Source files
-├── dist/            # Production build
-├── public/          # Static assets
-└── package.json     # Dependencies and scripts
 ```
 
 ## 🚀 Deployment
