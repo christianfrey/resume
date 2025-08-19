@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: true
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -34,6 +34,20 @@ jobs:
 
       - name: Build with Tailwind CSS
         run: npm run build
+
+      - name: Generate PDF with Puppeteer
+        run: |
+          npm install puppeteer
+          node -e "
+          const puppeteer = require('puppeteer');
+          (async () => {
+            const browser = await puppeteer.launch({args: ['--no-sandbox']});
+            const page = await browser.newPage();
+            await page.goto('file://' + process.cwd() + '/dist/index.html', {waitUntil: 'networkidle0'});
+            await page.pdf({ path: 'dist/resume.pdf', format: 'A4' });
+            await browser.close();
+          })();
+          "
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
