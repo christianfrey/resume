@@ -37,13 +37,15 @@ jobs:
 
       - name: Generate PDF with Puppeteer
         run: |
-          npm install puppeteer
+          npm install puppeteer serve
+          npx serve -s dist -l 5000 &
+          npx wait-on http://localhost:5000
           node -e "
           const puppeteer = require('puppeteer');
           (async () => {
             const browser = await puppeteer.launch({args: ['--no-sandbox']});
             const page = await browser.newPage();
-            await page.goto('file://' + process.cwd() + '/dist/index.html', {waitUntil: 'networkidle0'});
+            await page.goto('http://localhost:5000', {waitUntil: 'networkidle0'});
             await page.pdf({ path: 'dist/resume.pdf', format: 'A4' });
             await browser.close();
           })();
