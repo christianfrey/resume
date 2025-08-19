@@ -1,7 +1,15 @@
 {
   "name": "resume",
-  "private": true,
-  "version": "0.0.0",
+  "description": "Christian Frey's Resume - Full Stack Web Developer",
+  "version": "1.0.0",
+  "author": "Christian Frey",
+  "license": "MIT",
+  "keywords": [
+    "resume",
+    "cv",
+    "web",
+    "developer"
+  ],
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,6 +19,8 @@
   "devDependencies": {
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.14",
+    "puppeteer": "^24.16.2",
+    "serve": "^14.2.4",
     "vite": "^7.1.2"
   },
   "dependencies": {
