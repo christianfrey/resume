@@ -13,20 +13,27 @@
 
   <body class="bg-gray-50 text-gray-800 print:m-0 print:bg-white print:p-0 print:text-black">
     <main class="container mx-auto max-w-5xl gap-6 px-4 py-10 lg:grid lg:grid-cols-3 lg:gap-8 print:m-0 print:grid print:max-w-full print:grid-cols-3 print:gap-4 print:p-0">
-      <section class="header-section text-center lg:col-span-3 print:col-span-3 print:mt-0 print:mb-2 print:pt-0 print:pb-2 print:text-left">
+      <section class="header-section relative text-center lg:col-span-3 print:col-span-3 print:mt-0 print:mb-2 print:pt-0 print:pb-2 print:text-left">
         <div class="header-content flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-8 lg:text-left print:flex print:flex-row print:items-center">
           <img src="/profile.jpg" alt="Photo de profil" class="ring-primary/30 mx-auto h-40 w-40 rounded-full object-cover shadow-lg ring-4 lg:mx-0 print:m-0 print:h-32 print:w-32 print:border print:border-gray-300 print:shadow-none print:ring-0" />
           <div class="header-text print:flex-grow">
             <h1 class="text-4xl font-extrabold text-gray-900 print:mt-0 print:text-[1.5rem]">Christian Frey</h1>
-            <p class="text-primary subtitle text-2xl font-semibold print:mt-1 print:text-lg">Développeur Web Full Stack</p>
+            <p class="text-primary subtitle mt-2 text-2xl font-semibold print:mt-1 print:text-lg">Développeur Web Full Stack</p>
             <p class="mx-auto mt-3 max-w-3xl text-gray-600 lg:max-w-none print:mt-1 print:text-sm">
               Développeur web full stack expérimenté en PHP/Laravel et React/Next.js,
               <br />
               je recherche de nouveaux défis techniques et des projets innovants en Alsace.
             </p>
-            <a href="./resume.pdf" class="mt-4 inline-flex items-center rounded-lg bg-blue-600 px-4 py-2 text-white transition-colors hover:bg-blue-700 print:hidden" download="resume.pdf">📄 Télécharger PDF v2</a>
           </div>
         </div>
+        <a href="resume.pdf" class="bg-primary/90 hover:bg-primary absolute top-0 right-0 flex items-center gap-2 rounded-full px-4 py-2 text-white transition-colors print:hidden" download="resume.pdf">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M9 17L15 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M12 6V13M12 13L15.5 9.5M12 13L8.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+          PDF
+        </a>
       </section>
 
       <!-- Colonne de gauche: Compétences, Langues, Contact, Formation -->
