@@ -4,7 +4,7 @@ A modern, responsive personal resume website built with Tailwind CSS v4 and Pupp
 
 ## Live Demo
 
-[View Live Resume](https://christianfrey.github.io/resume/)
+[View Live Resume](https://christianfrey.github.io/resume/) | [Download PDF](https://christianfrey.github.io/resume/resume.pdf)
 
 ## Tech Stack
 
