@@ -16,13 +16,14 @@ A modern, responsive personal resume website built with Tailwind CSS and Puppete
 
 ## Tech Stack
 
-| Technology                                            | Purpose                     |
-| ----------------------------------------------------- | --------------------------- |
-| [Vite](https://vite.dev/)                             | Build Tool & Dev Server     |
-| [Tailwind CSS](https://tailwindcss.com/)              | Utility-first CSS framework |
-| [Puppeteer](https://pptr.dev/)                        | PDF Generation              |
-| [GitHub Pages](https://pages.github.com/)             | Static Site Hosting         |
-| [GitHub Actions](https://github.com/features/actions) | CI/CD Pipeline              |
+| Technology                                            | Purpose                                  |
+| ----------------------------------------------------- | ---------------------------------------- |
+| [Vite](https://vite.dev/)                             | Build Tool & Dev Server                  |
+| [Tailwind CSS](https://tailwindcss.com/)              | Utility-first CSS framework              |
+| [Prettier](https://prettier.io/)                      | Code formatting + Tailwind class sorting |
+| [Puppeteer](https://pptr.dev/)                        | PDF Generation                           |
+| [GitHub Pages](https://pages.github.com/)             | Static Site Hosting                      |
+| [GitHub Actions](https://github.com/features/actions) | CI/CD Pipeline                           |
 
 ## Quick Start
 
