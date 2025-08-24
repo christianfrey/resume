@@ -22,7 +22,7 @@
   </head>
 
   <body class="bg-gray-50 text-gray-800 print:m-0 print:bg-white print:p-0 print:text-black">
-    <main class="container mx-auto max-w-5xl gap-6 px-4 py-10 lg:grid lg:grid-cols-3 lg:gap-8 print:m-0 print:grid print:max-w-full print:grid-cols-3 print:gap-4 print:p-0">
+    <main class="container mx-auto grid max-w-5xl grid-cols-1 gap-6 px-4 py-10 lg:grid-cols-3 lg:gap-8 print:m-0 print:grid print:max-w-full print:grid-cols-3 print:gap-4 print:p-0">
       <section class="header-section relative text-center lg:col-span-3 print:col-span-3 print:mt-0 print:mb-2 print:pt-0 print:pb-2 print:text-left">
         <div class="header-content flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-8 lg:text-left print:flex print:flex-row print:items-center">
           <img src="/profile.jpg" alt="Photo de profil" loading="lazy" class="ring-primary/30 mx-auto h-40 w-40 rounded-full object-cover shadow-lg ring-4 lg:mx-0 print:m-0 print:h-32 print:w-32 print:border print:border-gray-300 print:shadow-none print:ring-0" />
@@ -47,7 +47,7 @@
       </section>
 
       <!-- Colonne de gauche: Compétences, Langues, Contact, Formation -->
-      <div class="left-column space-y-4 lg:col-span-1 print:col-span-1">
+      <div class="left-column order-2 mt-4 space-y-4 lg:order-1 lg:col-span-1 lg:mt-0 print:col-span-1">
         <div>
           <h2 class="border-primary inline-block border-b-2 pb-1 text-xl font-bold text-gray-900 print:text-base">Compétences</h2>
           <div class="mt-3 space-y-3">
@@ -169,7 +169,7 @@
       </div>
 
       <!-- Colonne de droite: Expérience -->
-      <div class="right-column space-y-12 lg:col-span-2 print:col-span-2 print:pl-4">
+      <div class="right-column order-1 mt-4 space-y-12 lg:order-2 lg:col-span-2 lg:mt-0 print:col-span-2 print:pl-4">
         <div>
           <h2 class="border-primary inline-block border-b-2 pb-1 text-xl font-bold text-gray-900 print:text-base">Expérience</h2>
           <div class="experience-block relative mt-6 print:mt-4">
