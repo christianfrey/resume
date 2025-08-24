@@ -2,6 +2,8 @@
 
 A modern, responsive personal resume website built with Tailwind CSS and Puppeteer for PDF generation.
 
+⭐ Don't forget to star this repo if you find it helpful!
+
 ## Preview
 
 [View Live Resume](https://christianfrey.github.io/resume/) | [Download PDF](https://christianfrey.github.io/resume/resume.pdf)
@@ -90,7 +92,3 @@ This is a personal resume project, but feel free to:
 - Report bugs or suggest improvements via issues
 - Fork the project as inspiration for your own resume
 - Share feedback on the design or code structure
-
----
-
-⭐ **Star this repo** if you found it helpful for building your own resume!
