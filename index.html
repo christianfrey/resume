@@ -21,22 +21,23 @@
     <link href="/src/style.css" rel="stylesheet" />
   </head>
 
-  <body class="bg-gray-50 text-gray-800 print:m-0 print:bg-white print:p-0 print:text-black">
+  <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 print:m-0 print:bg-white print:p-0 print:text-black">
     <main class="container mx-auto grid max-w-5xl grid-cols-1 gap-6 px-4 py-10 lg:grid-cols-3 lg:gap-8 print:m-0 print:grid print:max-w-full print:grid-cols-3 print:gap-4 print:p-0">
       <section class="header-section relative text-center lg:col-span-3 print:col-span-3 print:mt-0 print:mb-2 print:pt-0 print:pb-2 print:text-left">
         <div class="header-content flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-8 lg:text-left print:flex print:flex-row print:items-center">
           <img src="/profile.jpg" alt="Photo de profil" loading="lazy" class="ring-primary/30 mx-auto h-40 w-40 rounded-full object-cover shadow-lg ring-4 lg:mx-0 print:m-0 print:h-32 print:w-32 print:border print:border-gray-300 print:shadow-none print:ring-0" />
           <div class="header-text print:flex-grow">
-            <h1 class="text-4xl font-extrabold text-gray-900 print:mt-0 print:text-[1.5rem]">Christian Frey</h1>
+            <h1 class="text-4xl font-extrabold text-gray-900 dark:text-white print:mt-0 print:text-[1.5rem]">Christian Frey</h1>
             <p class="text-primary subtitle mt-2 text-2xl font-semibold print:mt-1 print:text-lg">Développeur Web Full Stack</p>
-            <p class="mx-auto mt-3 max-w-3xl text-gray-600 lg:max-w-none print:mt-1 print:text-sm">
+            <p class="mx-auto mt-3 max-w-3xl text-gray-600 lg:max-w-none dark:text-gray-300 print:mt-1 print:text-sm">
               Développeur web full stack expérimenté en PHP/Laravel et React/Next.js,
               <br />
               je recherche de nouveaux défis techniques et des projets innovants en Alsace.
             </p>
           </div>
         </div>
-        <a href="resume.pdf" class="bg-primary/90 hover:bg-primary absolute top-0 right-0 flex items-center gap-2 rounded-full px-4 py-2 text-white transition-colors print:hidden" download="resume.pdf">
+        <!-- Bouton PDF -->
+        <a href="resume.pdf" class="bg-primary/90 hover:bg-primary absolute top-0 right-24 flex items-center gap-2 rounded-full px-4 py-2 text-white transition-colors print:hidden" download="resume.pdf">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M9 17L15 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
             <path d="M12 6V13M12 13L15.5 9.5M12 13L8.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -44,6 +45,17 @@
           </svg>
           PDF
         </a>
+        <!-- Toggle Dark Mode -->
+        <button id="darkToggle" class="absolute top-0 right-0 flex h-10 w-20 cursor-pointer items-center rounded-full bg-gradient-to-r from-sky-300 to-amber-300 p-1 shadow-inner transition-all duration-500 dark:from-indigo-800 dark:to-violet-900 print:hidden" aria-label="Basculer le mode sombre" title="Basculer le mode sombre">
+          <span id="toggleThumb" class="relative flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-md transition-all duration-500">
+            <svg id="sunIcon" class="h-5 w-5 text-amber-500 transition-all duration-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
+            </svg>
+            <svg id="moonIcon" class="absolute h-5 w-5 text-indigo-600 transition-all duration-500" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+            </svg>
+          </span>
+        </button>
       </section>
 
       <!-- Colonne de gauche: Compétences, Langues, Contact, Formation -->
@@ -52,10 +64,11 @@
           <h2 class="section-title">Compétences</h2>
           <div class="mt-3 space-y-3">
             <div>
-              <h3 class="font-semibold text-gray-700 print:text-sm">Front-End</h3>
+              <h3 class="font-semibold text-gray-700 dark:text-gray-300 print:text-sm">Front-End</h3>
               <ul class="mt-1 flex flex-wrap gap-1 text-sm print:text-xs">
                 <li class="badge">React</li>
                 <li class="badge">Next.js</li>
+                <li class="badge">TypeScript</li>
                 <li class="badge">JavaScript</li>
                 <li class="badge">Tailwind CSS</li>
                 <li class="badge">Motion</li>
@@ -63,7 +76,7 @@
               </ul>
             </div>
             <div>
-              <h3 class="font-semibold text-gray-700 print:text-sm">Back-End</h3>
+              <h3 class="font-semibold text-gray-700 dark:text-gray-300 print:text-sm">Back-End</h3>
               <ul class="mt-1 flex flex-wrap gap-1 text-sm print:text-xs">
                 <li class="badge">PHP / Laravel</li>
                 <li class="badge">Node.js</li>
@@ -71,7 +84,7 @@
               </ul>
             </div>
             <div>
-              <h3 class="font-semibold text-gray-700 print:text-sm">Bases de données</h3>
+              <h3 class="font-semibold text-gray-700 dark:text-gray-300 print:text-sm">Bases de données</h3>
               <ul class="mt-1 flex flex-wrap gap-1 text-sm print:text-xs">
                 <li class="badge">MySQL</li>
                 <li class="badge">PostgreSQL</li>
@@ -79,7 +92,7 @@
               </ul>
             </div>
             <div>
-              <h3 class="font-semibold text-gray-700 print:text-sm">Outils &amp; Méthodes</h3>
+              <h3 class="font-semibold text-gray-700 dark:text-gray-300 print:text-sm">Outils &amp; Méthodes</h3>
               <ul class="mt-1 flex flex-wrap gap-1 text-sm print:text-xs">
                 <li class="badge">Git</li>
                 <li class="badge">CI/CD</li>
@@ -92,19 +105,19 @@
         <div>
           <h2 class="section-title">Formation</h2>
           <ul class="mt-4 space-y-2 text-sm print:space-y-1 print:text-xs">
-            <li class="rounded border border-slate-200 bg-white px-3 py-2 shadow-sm print:border-gray-300 print:p-[0.3rem_0.5rem] print:shadow-none">
+            <li class="rounded border border-slate-200 bg-white px-3 py-2 shadow-sm dark:border-slate-600 dark:bg-gray-800 print:border-gray-300 print:p-[0.3rem_0.5rem] print:shadow-none">
               <div class="flex items-center justify-between print:text-[0.65rem]">
                 <span class="font-medium">SST (Initiale & Recyclage)</span>
-                <span class="text-gray-500">2021 & 2024</span>
+                <span class="text-gray-500 dark:text-gray-400">2021 & 2024</span>
               </div>
-              <span class="text-xs text-gray-600 print:text-[0.6rem]">GIFOP FORMATION</span>
+              <span class="text-xs text-gray-600 dark:text-gray-400 print:text-[0.6rem]">GIFOP FORMATION</span>
             </li>
-            <li class="rounded border border-slate-200 bg-white px-3 py-2 shadow-sm print:border-gray-300 print:p-[0.3rem_0.5rem] print:shadow-none">
+            <li class="rounded border border-slate-200 bg-white px-3 py-2 shadow-sm dark:border-slate-600 dark:bg-gray-800 print:border-gray-300 print:p-[0.3rem_0.5rem] print:shadow-none">
               <div class="flex items-center justify-between print:text-[0.65rem]">
                 <span class="font-medium">DUT Informatique</span>
-                <span class="text-gray-500">2005-2007</span>
+                <span class="text-gray-500 dark:text-gray-400">2005-2007</span>
               </div>
-              <span class="text-xs text-gray-600 print:text-[0.6rem]">IUT Robert Schuman</span>
+              <span class="text-xs text-gray-600 dark:text-gray-400 print:text-[0.6rem]">IUT Robert Schuman</span>
             </li>
           </ul>
         </div>
@@ -112,20 +125,20 @@
         <div>
           <h2 class="section-title">Langues</h2>
           <ul class="mt-4 space-y-2 text-sm print:space-y-1 print:text-[0.65rem]">
-            <li class="flex items-center justify-between rounded border border-slate-200 bg-white px-3 py-2 shadow-sm print:border-gray-300 print:p-[0.2rem_0.5rem] print:shadow-none">
+            <li class="flex items-center justify-between rounded border border-slate-200 bg-white px-3 py-2 shadow-sm dark:border-slate-600 dark:bg-gray-800 print:border-gray-300 print:p-[0.2rem_0.5rem] print:shadow-none">
               <span>Anglais</span>
-              <span class="text-gray-500 print:ml-2">Courant</span>
+              <span class="text-gray-500 dark:text-gray-400 print:ml-2">Courant</span>
             </li>
-            <li class="flex items-center justify-between rounded border border-slate-200 bg-white px-3 py-2 shadow-sm print:border-gray-300 print:p-[0.2rem_0.5rem] print:shadow-none">
+            <li class="flex items-center justify-between rounded border border-slate-200 bg-white px-3 py-2 shadow-sm dark:border-slate-600 dark:bg-gray-800 print:border-gray-300 print:p-[0.2rem_0.5rem] print:shadow-none">
               <span>Allemand</span>
-              <span class="text-gray-500 print:ml-2">Notions</span>
+              <span class="text-gray-500 dark:text-gray-400 print:ml-2">Notions</span>
             </li>
           </ul>
         </div>
 
         <div>
           <h2 class="section-title">Détails</h2>
-          <div class="mt-4 flex flex-col gap-2 text-sm text-gray-600 print:gap-1 print:text-xs">
+          <div class="mt-4 flex flex-col gap-2 text-sm text-gray-600 dark:text-gray-300 print:gap-1 print:text-xs">
             <!-- Lieu-->
             <div class="contact-item">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
@@ -136,14 +149,14 @@
               Wittenheim, Alsace
             </div>
             <!-- Téléphone -->
-            <a href="tel:+33606532786" class="contact-item hover:text-primary">
+            <a href="tel:+33606532786" class="contact-item hover:text-primary dark:hover:bg-gray-700">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
               </svg>
               +33 6 06 53 27 86
             </a>
             <!-- Email -->
-            <a href="mailto:christian.ubu@gmail.com" class="contact-item hover:text-primary">
+            <a href="mailto:christian.ubu@gmail.com" class="contact-item hover:text-primary dark:hover:bg-gray-700">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
                 <rect width="20" height="16" x="2" y="4" rx="2" />
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
@@ -151,14 +164,14 @@
               christian.ubu@gmail.com
             </a>
             <!-- GitHub -->
-            <a href="https://github.com/christianfrey" class="contact-item hover:text-primary" target="_blank" rel="noreferrer">
+            <a href="https://github.com/christianfrey" class="contact-item hover:text-primary dark:hover:bg-gray-700" target="_blank" rel="noreferrer">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="text-primary">
                 <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"></path>
               </svg>
               github.com/christianfrey
             </a>
             <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/christian-frey-13375p34k/" class="contact-item hover:text-primary" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/christian-frey-13375p34k/" class="contact-item hover:text-primary dark:hover:bg-gray-700" target="_blank" rel="noreferrer">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class="text-primary">
                 <path fill="currentColor" d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248c-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586c.173-.431.568-.878 1.232-.878c.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252c-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"></path>
               </svg>
@@ -182,12 +195,12 @@
                 <div class="flex items-baseline justify-between gap-x-3">
                   <h3 class="text-lg font-semibold print:text-base">
                     Normalu Barrisol
-                    <span class="text-sm font-normal text-gray-500 print:text-xs">• Kembs, Alsace</span>
+                    <span class="text-sm font-normal text-gray-500 dark:text-gray-400 print:text-xs">• Kembs, Alsace</span>
                   </h3>
                   <span class="text-primary text-sm font-semibold print:text-xs">2015 → 2026</span>
                 </div>
-                <p class="job-title mt-1 text-sm text-gray-600 print:text-xs print:leading-tight">Développeur Web Full Stack</p>
-                <ul class="job-list mt-3 list-inside list-disc space-y-1 text-gray-700 print:mt-2 print:list-disc print:pl-4 print:text-[0.7rem] print:text-gray-700">
+                <p class="job-title mt-1 text-sm text-gray-600 dark:text-gray-300 print:text-xs print:leading-tight">Développeur Web Full Stack</p>
+                <ul class="job-list mt-3 list-inside list-disc space-y-1 text-gray-700 dark:text-gray-300 print:mt-2 print:list-disc print:pl-4 print:text-[0.7rem] print:text-gray-700">
                   <li>Développer un site web interactif pour la visualisation de projets en 360°, avec back-office de gestion et tri dynamique dans le front-office (Laravel, Livewire, Tailwind).</li>
                   <li>Refondre l'UI/UX des sites web de l'entreprise pour améliorer l'expérience utilisateur.</li>
                   <li>Créer et gérer un CMS propriétaire pour faciliter la publication et la gestion de contenu.</li>
@@ -203,12 +216,12 @@
                 <div class="flex items-baseline justify-between gap-x-3">
                   <h3 class="text-lg font-semibold print:text-base">
                     Dékuple Search Marketing
-                    <span class="text-sm font-normal text-gray-500 print:text-xs">• Mulhouse</span>
+                    <span class="text-sm font-normal text-gray-500 dark:text-gray-400 print:text-xs">• Mulhouse</span>
                   </h3>
                   <span class="text-primary text-sm font-semibold print:text-xs">2011 → 2015</span>
                 </div>
-                <p class="job-title mt-1 text-sm text-gray-600 print:text-xs print:leading-tight">Développeur Web Full Stack</p>
-                <ul class="job-list mt-3 list-inside list-disc space-y-1 text-gray-700 print:mt-2 print:list-disc print:pl-4 print:text-[0.7rem] print:text-gray-700">
+                <p class="job-title mt-1 text-sm text-gray-600 dark:text-gray-300 print:text-xs print:leading-tight">Développeur Web Full Stack</p>
+                <ul class="job-list mt-3 list-inside list-disc space-y-1 text-gray-700 dark:text-gray-300 print:mt-2 print:list-disc print:pl-4 print:text-[0.7rem] print:text-gray-700">
                   <li>Création et maintenance de sites clients, sites e-commerce, CMS propriétaire et grand public (WordPress, Drupal, Prestashop, Magento..).</li>
                   <li>Optimisation SEO et performances web.</li>
                   <li>Auditer et garantir la sécurité de l'ensemble des sites via correctifs.</li>
@@ -220,12 +233,12 @@
                 <div class="flex items-baseline justify-between gap-x-3">
                   <h3 class="text-lg font-semibold print:text-base">
                     Docaposte
-                    <span class="text-sm font-normal text-gray-500 print:text-xs">• Paris</span>
+                    <span class="text-sm font-normal text-gray-500 dark:text-gray-400 print:text-xs">• Paris</span>
                   </h3>
                   <span class="text-primary text-sm font-semibold print:text-xs">2009 → 2011</span>
                 </div>
-                <p class="job-title mt-1 text-sm text-gray-600 print:text-xs print:leading-tight">Développeur Web</p>
-                <ul class="job-list mt-3 list-inside list-disc space-y-1 text-gray-700 print:mt-2 print:list-disc print:pl-4 print:text-[0.7rem] print:text-gray-700">
+                <p class="job-title mt-1 text-sm text-gray-600 dark:text-gray-300 print:text-xs print:leading-tight">Développeur Web</p>
+                <ul class="job-list mt-3 list-inside list-disc space-y-1 text-gray-700 dark:text-gray-300 print:mt-2 print:list-disc print:pl-4 print:text-[0.7rem] print:text-gray-700">
                   <li>Développement d'outils web MVC avec Zend Framework.</li>
                   <li>Administration MySQL et développement d’un parseur XML en PHP pour un web service SOAP de traitement massif de fichiers.</li>
                   <li>Création de formulaires d'upload sécurisés (PHP/APC, ClamAV).</li>
@@ -238,12 +251,12 @@
                 <div class="flex items-baseline justify-between gap-x-3">
                   <h3 class="text-lg font-semibold print:text-base">
                     SpotCoffee
-                    <span class="text-sm font-normal text-gray-500 print:text-xs">• Paris</span>
+                    <span class="text-sm font-normal text-gray-500 dark:text-gray-400 print:text-xs">• Paris</span>
                   </h3>
                   <span class="text-primary text-sm font-semibold print:text-xs">2007 → 2008</span>
                 </div>
-                <p class="job-title mt-1 text-sm text-gray-600 print:text-xs print:leading-tight">Développeur Full Stack & Réseaux (Startup)</p>
-                <ul class="job-list mt-3 list-inside list-disc space-y-1 text-gray-700 print:mt-2 print:list-disc print:pl-4 print:text-[0.7rem] print:text-gray-700">
+                <p class="job-title mt-1 text-sm text-gray-600 dark:text-gray-300 print:text-xs print:leading-tight">Développeur Full Stack & Réseaux (Startup)</p>
+                <ul class="job-list mt-3 list-inside list-disc space-y-1 text-gray-700 dark:text-gray-300 print:mt-2 print:list-disc print:pl-4 print:text-[0.7rem] print:text-gray-700">
                   <li>Développement de solutions Wi-Fi pour CHR : CMS, portails captifs, back-office de gestion de hotspots sécurisés.</li>
                   <li>Personnalisation de firmwares OpenWrt et outils de déploiement (C, Python).</li>
                   <li>Administration serveurs (Fedora, Apache, MySQL, FreeRadius, OpenVPN).</li>
@@ -260,7 +273,41 @@
     <footer class="mt-12 pb-8 text-center print:hidden">
       <p class="font-sans text-[0.92rem] text-gray-500 dark:text-gray-400">&copy; 2026 Christian Frey</p>
     </footer>
-  </body>
+    <script>
+      const darkToggle = document.getElementById('darkToggle')
+      const thumb = document.getElementById('toggleThumb')
+      const sunIcon = document.getElementById('sunIcon')
+      const moonIcon = document.getElementById('moonIcon')
+      const html = document.documentElement
 
-  <!-- <script type="module" src="/src/main.js"></script> -->
+      function initDarkMode() {
+        const saved = localStorage.getItem('darkMode')
+        if (saved !== null) {
+          setDarkMode(JSON.parse(saved))
+        } else {
+          setDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches)
+        }
+      }
+
+      function setDarkMode(isDark) {
+        html.classList.toggle('dark', isDark)
+        thumb.style.transform = isDark ? 'translateX(2.5rem)' : 'translateX(0)'
+        sunIcon.style.transform = isDark ? 'rotate(180deg) scale(0)' : 'rotate(0deg) scale(1)'
+        sunIcon.style.opacity = isDark ? '0' : '1'
+        moonIcon.style.transform = isDark ? 'rotate(0deg) scale(1)' : 'rotate(-180deg) scale(0)'
+        moonIcon.style.opacity = isDark ? '1' : '0'
+        darkToggle.setAttribute('aria-label', isDark ? 'Activer le mode clair' : 'Activer le mode sombre')
+        darkToggle.setAttribute('title', isDark ? 'Activer le mode clair' : 'Activer le mode sombre')
+        localStorage.setItem('darkMode', JSON.stringify(isDark))
+      }
+
+      darkToggle.addEventListener('click', () => setDarkMode(!html.classList.contains('dark')))
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (localStorage.getItem('darkMode') === null) setDarkMode(e.matches)
+      })
+
+      initDarkMode()
+    </script>
+  </body>
 </html>

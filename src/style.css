@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-primary: #7c3aed;
   --font-sans: 'Inter', ui-sans-serif, system-ui;
@@ -10,14 +12,22 @@ body {
   height: 100%;
 }
 
+/* Transitions fluides pour le dark mode */
+*:not(#darkToggle):not(#darkToggle *) {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
 /* Badges pour compétences */
 .badge {
-  @apply rounded border border-slate-200 bg-white px-2 py-1 shadow-sm print:border-gray-300 print:p-[0.2rem_0.3rem] print:shadow-none;
+  @apply rounded border border-slate-200 bg-white px-2 py-1 shadow-sm dark:border-slate-600 dark:bg-gray-800 print:border-gray-300 print:p-[0.2rem_0.3rem] print:shadow-none;
 }
 
 /* Items de contact (tel, email, GitHub, LinkedIn) */
 .contact-item {
-  @apply flex items-center gap-3 rounded border border-slate-200 bg-white px-3 py-2 shadow-sm print:border-gray-300 print:py-[0.3rem] print:shadow-none;
+  @apply flex items-center gap-3 rounded border border-slate-200 bg-white px-3 py-2 shadow-sm dark:border-slate-600 dark:bg-gray-800 print:border-gray-300 print:py-[0.3rem] print:shadow-none;
 }
 
 /* Timeline dots pour l'expérience */
@@ -28,7 +38,7 @@ body {
 
 /* Titres de section h2 */
 .section-title {
-  @apply border-primary inline-block border-b-2 pb-1 text-xl font-bold text-gray-900 print:text-base;
+  @apply border-primary inline-block border-b-2 pb-1 text-xl font-bold text-gray-900 dark:text-white print:text-base;
 }
 
 @media print {
